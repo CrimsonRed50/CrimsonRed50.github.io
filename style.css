@@ -1,3 +1,461 @@
 html body {
-    background-color: rgb(247, 109, 109);
+    
+    width: 100%;
+}
+body {
+    background-image: linear-gradient(rgb(123, 216, 216), rgb(218, 212, 212));
+    font-family: 'Concert One', cursive;
+    font-size: 16px;
+}
+
+
+.navLink {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    width: 20px;
+}
+.navLink:hover {
+    color: rgb(79, 219, 201);
+    background-color: rgb(49, 49, 48);
+    border-radius: 50%;
+    
+}
+.header {
+    color: white;
+    margin-right: 550px;
+}
+
+.carousel-item > img {
+    height: 800px;
+
+}
+
+.getKnow {
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.main-timeline {
+    position: relative
+}
+
+.main-timeline:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: #c6c6c6;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.main-timeline .timeline {
+    margin-bottom: 40px;
+    position: relative
+}
+
+.main-timeline .timeline:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.main-timeline .icon {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.main-timeline .icon:before,
+.main-timeline .icon:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.33s ease-out 0s
+}
+
+.main-timeline .icon:before {
+    background: #fff;
+    border: 2px solid #232323;
+    left: -3px
+}
+
+.main-timeline .icon:after {
+    border: 2px solid #c6c6c6;
+    left: 3px
+}
+
+.main-timeline .timeline:hover .icon:before {
+    left: 3px
+}
+
+.main-timeline .timeline:hover .icon:after {
+    left: -3px
+}
+
+.main-timeline .date-content {
+    width: 50%;
+    float: left;
+    margin-top: 22px;
+    position: relative
+}
+
+.main-timeline .date-content:before {
+    content: "";
+    width: 36.5%;
+    height: 2px;
+    background: #c6c6c6;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0
+}
+
+.main-timeline .date-outer {
+    width: 125px;
+    height: 125px;
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    z-index: 1
+}
+
+.main-timeline .date-outer:before,
+.main-timeline .date-outer:after {
+    content: "";
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.33s ease-out 0s
+}
+
+.main-timeline .date-outer:before {
+    background: #fff;
+    border: 2px solid #e66419;
+    left: -6px
+}
+
+.main-timeline .date-outer:after {
+    border: 2px solid #c6c6c6;
+    left: 6px
+}
+
+.main-timeline .timeline:hover .date-outer:before {
+    left: 6px
+}
+
+.main-timeline .timeline:hover .date-outer:after {
+    left: -6px
+}
+
+.main-timeline .date {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 27%;
+    left: 0
+}
+
+.main-timeline .month {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.main-timeline .year {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #232323;
+    line-height: 36px
+}
+
+.main-timeline .timeline-content {
+    width: 50%;
+    padding: 20px 0 20px 50px;
+    float: right
+}
+
+.main-timeline .title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 15px 0
+}
+
+.main-timeline .description {
+    margin-bottom: 0
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content {
+    float: right
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content:before {
+    left: 10px
+}
+
+.main-timeline .timeline:nth-child(2n) .timeline-content {
+    padding: 20px 50px 20px 0;
+    text-align: right
+}
+
+@media only screen and (max-width: 990px) {
+    .main-timeline .date-content {
+        margin-top: 35px
+    }
+    .main-timeline .date-content:before {
+        width: 22.5%
+    }
+    .main-timeline .timeline-content {
+        padding: 10px 0 10px 30px
+    }
+    .main-timeline .title {
+        font-size: 17px
+    }
+    .main-timeline .timeline:nth-child(2n) .timeline-content {
+        padding: 10px 30px 10px 0
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main-timeline:before {
+        margin: 0;
+        left: 7px
+    }
+    .main-timeline .timeline {
+        margin-bottom: 20px
+    }
+    .main-timeline .timeline:last-child {
+        margin-bottom: 0
+    }
+    .main-timeline .icon {
+        margin: auto 0
+    }
+    .main-timeline .date-content {
+        width: 95%;
+        float: right;
+        margin-top: 0
+    }
+    .main-timeline .date-content:before {
+        display: none
+    }
+    .main-timeline .date-outer {
+        width: 110px;
+        height: 110px
+    }
+    .main-timeline .date-outer:before,
+    .main-timeline .date-outer:after {
+        width: 110px;
+        height: 110px
+    }
+    .main-timeline .date {
+        top: 30%
+    }
+    .main-timeline .year {
+        font-size: 24px
+    }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(2n) .timeline-content {
+        width: 95%;
+        text-align: center;
+        padding: 10px 0
+    }
+    .main-timeline .title {
+        margin-bottom: 10px
+    }
+}
+
+ h3 {
+    text-align: center;
+    padding: 3em;
+}
+  .section1 {
+    padding: 20px;
+    margin: auto;
+    width: 100%; 
+    display: flex;
+    align-items: flex-start;
+    
+
+  }
+
+  .card {
+      margin-right: 100px;
+  }
+
+
+  .allCards {
+    
+    width: 100%;
+    padding: 20px;
+    border-width: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+.allcards > .card {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 10%;
+}
+
+.width {
+    margin-left: 100px;
+}
+.card-body {
+    background-color: whitesmoke;
+    padding: 50px;
+    height: 500px;
+
+}
+
+
+.myMusic {
+    justify-content: flex-end;
+    margin-top: 30%;
+}
+
+
+.myMusic > h4 {
+    text-align: center;
+    padding-bottom: 1em;
+    
+}
+
+#tableTitle {
+    text-align: center;
+}
+
+.table-responsive {
+    margin-top: 200px;
+    background-color: rgb(238, 162, 118);
+    table-layout: fixed;
+    width: 100%;
+    
+}
+
+td {
+    width: 20%
+}
+
+.timeline > .container .right > .container .left {
+    width: 33%;
+    
+}
+
+.myAnime {
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    cursor: pointer;
+    transition: all 0.7s ease-in;
+}
+
+
+.myAnime > .anime1:hover {
+    opacity: 0.7;
+    transform: scale(0.98)
+}
+
+#animeTitle {
+    text-align: center;
+    padding: 1em;
+}
+
+@media screen and (max-width: 1575px) {
+    .myAnime {
+        width: 50%;
+    }
+}
+    
+
+
+  /* For medium devices (e.g. tablets) */
+  @media (min-width: 420px) {
+    .myAnime > {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);    }
+  }
+  /* For large devices (e.g. desktops) */
+  @media (min-width: 760px) {
+    .myAnime {
+      max-width: 24%;
+    }
+  }
+
+#contactHeader {
+    text-align: center;
+    padding: 15px;
+}
+.contactForm {
+    margin: 0 auto;
+    text-align: center;
+    border-style: solid 5px;
+    border-color: black;
+    border-radius: 4%;
+    max-width: 600px;
+    color: rgb(134, 129, 125);
+    background-color: rgba(25, 25, 25, 0.8);
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+a { 
+    text-decoration: none;
+}
+
+.social {
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.social > div {
+    padding: 25px;
+}
+.social > div:hover {
+    opacity: 0.9;
+    transform: scale(.9);
+}
+
+footer  a:hover {
+    background-color: rgb(207, 202, 202);
+    color: rgb(248, 168, 121);
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    margin-top: 350px ;
+    background-color: rgba(25, 25, 25, 0.8);
+    width: auto;
+    color: rgb(185, 180, 180);
 }
